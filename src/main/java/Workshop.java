@@ -260,7 +260,7 @@ Rock crushes Scissors
     }
 
     public double areaCirculo(double radio) {
-	    double A = math.PI*radio*radio
+	    double A = math.PI*radio*radio;
         return A;
     }
 
