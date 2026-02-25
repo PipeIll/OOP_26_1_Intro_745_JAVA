@@ -47,7 +47,7 @@ public class Workshop {
 	for(int i=1; i <= n; i++){
 		result *= i;
 	}
-        return 0;
+        return result;
     }
 
     // Método que verifica si un número es primo
