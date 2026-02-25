@@ -260,7 +260,7 @@ Rock crushes Scissors
     }
 
     public double areaCirculo(double radio) {
-	    return (math.PI*radio);
+	    return (Math.PI*radio);
     }
 
     public String zoodiac(int day, int month) {
