@@ -57,7 +57,6 @@ public class Workshop {
 	if(numero<=1){
 		return false;
 	}
-	int result=1;
 	for(int i = 2; i * i <= numero; i++){
 		if(numero % i == 0){
 			return false;
@@ -71,12 +70,14 @@ public class Workshop {
         // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
-	if(n < 0){
-	throw new IllegalArgumentException("No se permiten numerps negativos");
+	if(n < 1){
+	throw new IllegalArgumentException("Tamaño minimo de una serie es 1");
 	}
 	int[] result = new int[n];
-	result[0] = 0;
-	result[1] = 1;
+    result[0] = 0;
+    if(n > 1){
+        result[1] = 1;
+    }
 	for(int i = 2; i < n; i++){
 		result[i] = result[i-2] + result[i-1];
 	}
@@ -87,9 +88,10 @@ public class Workshop {
     public int sumaElementos(int[] arreglo) {
         // TODO: Implementar el método para sumar todos los elementos de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 15.
+    if (arreglo == null) return 0;
 	int result = 0;
-	for(int i = 0; i < arreglo.length; i++){
-		result += arreglo[i];
+	for(int i : arreglo){
+		result += i;
 	}
         return result;
     }
@@ -98,15 +100,23 @@ public class Workshop {
     public double promedioElementos(int[] arreglo) {
         // TODO: Implementar el método para calcular el promedio de los elementos de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-	//
-        return 0.0;
+        if(arreglo==null || arreglo.length == 0) return 0.0;
+        int suma = sumaElementos(arreglo);
+        double result = (double) suma / arreglo.length;
+        return result;
     }
 
     // Método que encuentra el elemento mayor en un arreglo
     public int encontrarElementoMayor(int[] arreglo) {
         // TODO: Implementar el método para encontrar el elemento mayor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 5.
-        return 0;
+        int mayor = arreglo[0];
+        for (int i = 0; i <= arreglo.length; i++){
+            if(mayor < arreglo[i]){
+                mayor = arreglo[i];
+            }
+        }
+        return mayor;
     }
 
     // Método que encuentra el elemento menor en un arreglo
