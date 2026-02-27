@@ -71,6 +71,9 @@ public class Workshop {
         // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
+	if(n < 0){
+	throw new IllegalArgumentException("No se permiten numerps negativos");
+	}
 	int[] result = new int[n];
 	result[0] = 0;
 	result[1] = 1;
@@ -95,6 +98,7 @@ public class Workshop {
     public double promedioElementos(int[] arreglo) {
         // TODO: Implementar el método para calcular el promedio de los elementos de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
+	//
         return 0.0;
     }
 
