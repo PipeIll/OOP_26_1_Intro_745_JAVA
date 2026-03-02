@@ -152,10 +152,9 @@ public class Workshop {
             int temporal = arreglo[izquierda];
             arreglo[izquierda] = arreglo[derecha]:
             arreglo [derecha] = temporal;
-            izquierda++
-            derecha--
+            izquierda++;
+            derecha--;
         }
-
         return arreglo;
     }
 
