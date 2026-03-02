@@ -150,7 +150,7 @@ public class Workshop {
         int derecha = arreglo.length - 1;
         while(izquierda < derecha){
             int temporal = arreglo[izquierda];
-            arreglo[izquierda] = arreglo[derecha]:
+            arreglo[izquierda] = arreglo[derecha];
             arreglo [derecha] = temporal;
             izquierda++;
             derecha--;
