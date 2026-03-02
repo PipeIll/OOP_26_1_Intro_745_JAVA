@@ -121,13 +121,13 @@ public class Workshop {
     public int encontrarElementoMenor(int[] arreglo) {
         // TODO: Implementar el método para encontrar el elemento menor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 1.
-	int menor = arreglo[0];
-	for (int i = 1; i < arreglo.length; i++){
-		if(menor > arreglo[i]){
-			menor = arreglo[i];
-		}
-	}
-        return menor;
+        int menor = 0;
+        for (int i = 0; i < arreglo.length; i++){
+            if(arreglo[i] < arreglo[menor]){
+                menor = i;
+            }
+            return arrerglo[menor];
+        }
     }
 
     // Método que busca un elemento en un arreglo
