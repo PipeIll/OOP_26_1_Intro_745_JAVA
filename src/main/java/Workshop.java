@@ -37,16 +37,16 @@ public class Workshop {
         // TODO: Implementar el método para calcular el factorial de un número entero.
         // Ejemplo: Si n = 5, el resultado debería ser 120.
         // Lanzar IllegalArgumentException si n es negativo.
-	if(n<0){
-		throw new IllegalArgumentException("No se permiten numero negativos");
-	}
-	if(n==0){
-		return 1;
-	}
-	int result = 1;
-	for(int i=1; i <= n; i++){
-		result *= i;
-	}
+	    if(n<0){
+		    throw new IllegalArgumentException("No se permiten numero negativos");
+	    }
+	    if(n==0){
+		    return 1;
+	    }
+	    int result = 1;
+	        for(int i=1; i <= n; i++){
+		    result *= i;
+	    }
         return result;
     }
 
@@ -134,7 +134,7 @@ public class Workshop {
     public boolean buscarElemento(int[] arreglo, int elemento) {
         // TODO: Implementar el método para buscar un elemento en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y elemento = 3, el resultado debería ser true.
-	for(int i = 0; i < arreglo.lenght; i++){
+	for(int i = 0; i < arreglo.length; i++){
 		if(arreglo[i] == elemento){
 			return true;
 		}
@@ -147,7 +147,7 @@ public class Workshop {
         // TODO: Implementar el método para invertir un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser [5, 4, 3, 2, 1].
         int izquierda = 0;
-        int derecha = arreglo.lenght - 1;
+        int derecha = arreglo.length - 1;
         while(izquierda < derecha){
             int temporal = arreglo[izquierda];
             arreglo[izquierda] = arreglo[derecha]:
@@ -164,9 +164,9 @@ public class Workshop {
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
         int aux;
         int temp;
-        for(int i = 0; i < arreglo.lenght; i++){
+        for(int i = 0; i < arreglo.length; i++){
             aux = i;
-            for(int j = i + 1; j < arreglo.lenght; j++){
+            for(int j = i + 1; j < arreglo.length; j++){
                 if (arreglo[j] < arreglo[aux]){
                     aux = j;
                 }
