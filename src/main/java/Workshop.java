@@ -70,14 +70,12 @@ public class Workshop {
         // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
-	if(n < 1){
+	if(n < 0){
 	throw new IllegalArgumentException("Tamaño minimo de una serie es 1");
 	}
 	int[] result = new int[n];
-    result[0] = 0;
-    if(n > 1){
-        result[1] = 1;
-    }
+    if (n > 0) result[0] = 0;
+    if (n > 1) result[1] = 1;
 	for(int i = 2; i < n; i++){
 		result[i] = result[i-2] + result[i-1];
 	}
@@ -111,7 +109,7 @@ public class Workshop {
         // TODO: Implementar el método para encontrar el elemento mayor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 5.
         int mayor = arreglo[0];
-        for (int i = 0; i <= arreglo.length; i++){
+        for (int i = 0; i < arreglo.length; i++){
             if(mayor < arreglo[i]){
                 mayor = arreglo[i];
             }
@@ -123,13 +121,24 @@ public class Workshop {
     public int encontrarElementoMenor(int[] arreglo) {
         // TODO: Implementar el método para encontrar el elemento menor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 1.
-        return 0;
+	int menor = arreglo[0];
+	for (int i = 1; i < arreglo.length; i++){
+		if(menor > arreglo[i]){
+			menor = arreglo[i];
+		}
+	}
+        return menor;
     }
 
     // Método que busca un elemento en un arreglo
     public boolean buscarElemento(int[] arreglo, int elemento) {
         // TODO: Implementar el método para buscar un elemento en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y elemento = 3, el resultado debería ser true.
+	for(int i = 0; i < arreglo.lenght; i++){
+		if(arreglo[i] == elemento){
+			return true;
+		}
+	}
         return false;
     }
 
@@ -137,20 +146,44 @@ public class Workshop {
     public int[] invertirArreglo(int[] arreglo) {
         // TODO: Implementar el método para invertir un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser [5, 4, 3, 2, 1].
-        return new int[0];
+        int izquierda = 0;
+        int derecha = arreglo.lenght - 1;
+        while(izquierda < derecha){
+            int temporal = arreglo[izquierda];
+            arreglo[izquierda] = arreglo[derecha]:
+            arreglo [derecha] = temporal;
+            izquierda++
+            derecha--
+        }
+
+        return arreglo;
     }
 
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
+        int aux;
+        int temp;
+        for(int i = 0; i < arreglo.lenght; i++){
+            aux = i;
+            for(int j = i + 1; j < arreglo.lenght; j++){
+                if (arreglo[j] < arreglo[aux]){
+                    aux = j;
+                }
+            }
+            temp = arreglo[i];
+            arreglo[i] = arreglo[aux];
+            arreglo[aux] = temp;
+        }
+        return arreglo;
     }
 
     // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
         // TODO: Implementar el método para eliminar los duplicados de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
+
         return new int[0];
     }
 
