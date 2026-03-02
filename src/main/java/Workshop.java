@@ -126,8 +126,8 @@ public class Workshop {
             if(arreglo[i] < arreglo[menor]){
                 menor = i;
             }
-            return arrerglo[menor];
         }
+        return arreglo[menor];
     }
 
     // Método que busca un elemento en un arreglo
