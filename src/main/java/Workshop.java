@@ -336,7 +336,7 @@ public class Workshop {
         int computadora = (int) (Math.random() * 5);
         String eleccionComputadora = opciones[computadora];
         if(eleccionUsuario.equalsIgnoreCase(eleccionComputadora)){
-            return "Empate. Ambos seleccionaron " + eleccionUsuario;
+            return "Empate";
         }
         boolean victoriaUsuario = false;
         switch (eleccionComputadora) {
@@ -365,10 +365,10 @@ public class Workshop {
                 }
         }
         if(victoriaUsuario){
-            return "Has Ganado." + eleccionUsuario + " le gana a: " + eleccionComputadora;
+            return "Ganaste";
         }
         else{
-            return "Has Perdido." + eleccionUsuario + " pierde contra: " + eleccionComputadora;
+            return "Perdiste";
         }
     }
 
