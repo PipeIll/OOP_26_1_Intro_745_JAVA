@@ -427,6 +427,7 @@ Rock crushes Scissors
         if ((month == 12 && day >= 22) || (month == 1 && day <= 20)) return "Capricornio";
         if ((month == 1 && day >= 21) || (month == 2 && day <= 19)) return "Acuario";
         if ((month == 2 && day >= 20) || (month == 3 && day <= 20)) return "Picis";
+        return "Fecha no válida";
     }
 }
 
