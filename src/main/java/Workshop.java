@@ -305,6 +305,9 @@ public class Workshop {
     public String convertirABinario(int numero) {
         // TODO: Implementar el método para convertir un número en su representación binaria.
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
+        if(numero < 0) {
+            numero *= -1;
+        }
         return Integer.toBinaryString(numero);
     }
 
