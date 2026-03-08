@@ -205,13 +205,16 @@ public class Workshop {
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
         // TODO: Implementar el método para rotar un arreglo n posiciones.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
-        int[] rotado = new int[arreglo.length];
-        for (int i = 0; i < arreglo.length; i++){
-            rotado[i] = arreglo[(i + posiciones) % arreglo.length];
-        }
+        if (arreglo.length == 0) return arreglo;
+        int n = arreglo.length;
+        int[] rotado = new int[n];
+        int desplazamiento = ((posiciones % n) + n) % n;
+        for (int i = 0; i < n; i++) {
+           rotado[(i + desplazamiento) % n] = arreglo[i];
+         }
         return rotado;
     }
-
+    
     // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
