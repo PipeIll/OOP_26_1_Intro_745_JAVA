@@ -227,7 +227,11 @@ public class Workshop {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
          if (cadena == null) return null;
-        return  new StringBuilder(cadena).reverse().toString();
+         String resultado = "";
+         for (int i = cadena.length() - 1; i >= 0; i--) {
+                resultado += cadena.charAt(i);
+            }
+         return resultado;
     }
 
     // Método que verifica si una cadena es un palíndromo
