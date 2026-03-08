@@ -182,7 +182,7 @@ public class Workshop {
     public int[] eliminarDuplicados(int[] arreglo) {
         // TODO: Implementar el método para eliminar los duplicados de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
-
+        
         return new int[0];
     }
 
@@ -226,19 +226,16 @@ public class Workshop {
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-         String resultado = "";
-         for (int i = cadena.length() - 1; i >= 0; i--) {
-                resultado += cadena.charAt(i);
-            }
-         return resultado;
+        return  new StringBuilder(cadena).reverse().toString();
     }
 
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
         // Ejemplo: Si cadena = "madam", el resultado debería ser true.
-        String Reversa = new StringBuilder(cadena).reverse().toString();
-        return cadena.equals(Reversa);
+        String limpia = cadena.replace(" ", "").toLowerCase();
+        String Reversa = invertirCadena(limpia);
+        return limpia.equals(Reversa);
     }
 
     // Método que cuenta el número de palabras en una cadena
