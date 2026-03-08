@@ -332,6 +332,24 @@ public class Workshop {
 
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
+        String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
+        int computadora = (int) (Math.random() * 5);
+        String eleccionComputadora = opciones[computadora];
+        if(eleccionComputadora.equalsIgnoreCase(eleccionComputadora)){
+            return "Empate. Ambos seleccionaron " + eleccionUsuario;
+        }
+        boolean victoriaUsuario = false;
+        switch (
+        ) {
+            case "Piedra":
+                if(eleccionComputadora.equals("Tijera")) || if(eleccionComputadora.equals("Lagarto")){
+                    victoriaUsuario = true;
+                }                
+                break;
+            case "Papel":
+                if
+                break;
+        }
         return "";
     }
 
