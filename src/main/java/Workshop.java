@@ -307,6 +307,7 @@ public class Workshop {
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
         if(numero < 0) {
             numero *= -1;
+            return "-"+Integer.toBinaryString(numero);
         }
         return Integer.toBinaryString(numero);
     }
