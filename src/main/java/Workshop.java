@@ -233,9 +233,9 @@ public class Workshop {
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
         // Ejemplo: Si cadena = "madam", el resultado debería ser true.
-        String limpia = cadena.replace(" ", "").toLowerCase();
-        String Reversa = invertirCadena(limpia);
-        return limpia.equals(Reversa);
+        String cadenaLimpia = cadena.replace(" ", "").toLowerCase();
+        String Reversa = invertirCadena(cadenaLimpia);
+        return cadenaLimpia.equals(Reversa);
     }
 
     // Método que cuenta el número de palabras en una cadena
@@ -255,7 +255,7 @@ public class Workshop {
     public String convertirAMayusculas(String cadena) {
         // TODO: Implementar el método para convertir una cadena a mayúsculas.
         // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
-        return "";
+        return cadena.toUpperCase();
     }
 
     // Método que convierte una cadena a minúsculas
