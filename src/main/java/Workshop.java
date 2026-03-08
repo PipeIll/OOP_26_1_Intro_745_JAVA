@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 
 public class Workshop {
@@ -182,8 +183,7 @@ public class Workshop {
     public int[] eliminarDuplicados(int[] arreglo) {
         // TODO: Implementar el método para eliminar los duplicados de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
-        
-        return new int[0];
+        return Arrays.stream(arreglo).distinct().toArray();
     }
 
     // Método que combina dos arreglos en uno solo
