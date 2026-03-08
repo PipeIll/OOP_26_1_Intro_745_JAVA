@@ -391,7 +391,23 @@ Paper disproves Spock
 Spock vaporizes Rock
 Rock crushes Scissors
          */
-        return "";
+        String p1 = game[0];
+        String p2 = game[1];
+        if(p1.equals(p2)) return "Empate";
+        switch (p2) {
+            case "V":
+                    return(p1.equals("S") || p1.equals("R")) ? "Plyer 1" : "Player 2";
+            case "L":
+                    return(p1.equals("P") || p1.equals("V")) ? "Plyer 1" : "Player 2";
+            case "R":
+                    return(p1.equals("L") || p1.equals("S")) ? "Plyer 1" : "Player 2";
+            case "P":
+                    return(p1.equals("R") || p1.equals("V")) ? "Plyer 1" : "Player 2";
+            case "S":
+                    return(p1.equals("L") || p1.equals("P")) ? "Plyer 1" : "Player 2";
+            default:
+                return "No valido";
+        } 
     }
 
     public double areaCirculo(double radio) {
