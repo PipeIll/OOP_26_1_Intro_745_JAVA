@@ -335,22 +335,41 @@ public class Workshop {
         String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
         int computadora = (int) (Math.random() * 5);
         String eleccionComputadora = opciones[computadora];
-        if(eleccionComputadora.equalsIgnoreCase(eleccionComputadora)){
+        if(eleccionUsuario.equalsIgnoreCase(eleccionComputadora)){
             return "Empate. Ambos seleccionaron " + eleccionUsuario;
         }
         boolean victoriaUsuario = false;
-        switch (
-        ) {
+        switch (eleccionComputadora) {
             case "Piedra":
-                if(eleccionComputadora.equals("Tijera")) || if(eleccionComputadora.equals("Lagarto")){
+                if(eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Lagarto")){
                     victoriaUsuario = true;
                 }                
                 break;
             case "Papel":
-                if
+                if(eleccionComputadora.equals("Piedra") || eleccionComputadora.equals("Spock")){
+                    victoriaUsuario = true;
+                }
                 break;
+            case "Tijera":
+                if(eleccionComputadora.equals("Papel") && eleccionComputadora.equals("Lagarto")){
+                    victoriaUsuario = true;
+                }
+                break;
+            case "Lagarto":
+                if(eleccionComputadora.equals("Spock") || eleccionComputadora.equals("Papel")){
+                    victoriaUsuario = true;
+                }
+            case "Spock":
+                if(eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Piedra")){
+                    victoriaUsuario = true;
+                }
         }
-        return "";
+        if(victoriaUsuario){
+            return "Has Ganado." + eleccionUsuario + " le gana a: " + eleccionComputadora;
+        }
+        else{
+            return "Has Perdido." + eleccionUsuario + " pierde contra: " + eleccionComputadora;
+        }
     }
 
     public String pptls2(String game[]) {
