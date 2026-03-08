@@ -351,7 +351,7 @@ public class Workshop {
                 }
                 break;
             case "Tijera":
-                if(eleccionComputadora.equals("Papel") && eleccionComputadora.equals("Lagarto")){
+                if(eleccionComputadora.equals("Papel") || eleccionComputadora.equals("Lagarto")){
                     victoriaUsuario = true;
                 }
                 break;
