@@ -394,17 +394,17 @@ Rock crushes Scissors
         String p1 = game[0];
         String p2 = game[1];
         if(p1.equals(p2)) return "Empate";
-        switch (p2) {
+        switch (p1) {
             case "V":
-                    return(p1.equals("S") || p1.equals("R")) ? "Player 1" : "Player 2";
+                    return(p2.equals("S") || p2.equals("R")) ? "Player 1" : "Player 2";
             case "L":
-                    return(p1.equals("P") || p1.equals("V")) ? "Player 1" : "Player 2";
+                    return(p2.equals("P") || p2.equals("V")) ? "Player 1" : "Player 2";
             case "R":
-                    return(p1.equals("L") || p1.equals("S")) ? "Player 1" : "Player 2";
+                    return(p2.equals("L") || p2.equals("S")) ? "Player 1" : "Player 2";
             case "P":
-                    return(p1.equals("R") || p1.equals("V")) ? "Player 1" : "Player 2";
+                    return(p2.equals("R") || p2.equals("V")) ? "Player 1" : "Player 2";
             case "S":
-                    return(p1.equals("L") || p1.equals("P")) ? "Player 1" : "Player 2";
+                    return(p2.equals("L") || p2.equals("P")) ? "Player 1" : "Player 2";
             default:
                 return "No valido";
         } 
